@@ -1,0 +1,60 @@
+.pagehding-sec {
+  background-image: url('http://via.placeholder.com/2000x350/000/fff');
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 80px 0px;
+  position: relative;
+  background-size: cover;
+}
+.images-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.page-heading h1 {
+  font-size: 40px;
+  text-align: left;
+  text-transform: capitalize;
+  color: #fff;
+  margin: 0 0 10px;
+}
+.breadcrumb-list {
+  text-align: left;
+}
+.breadcrumb-list li {
+  display: inline-block;
+  position: relative;
+  padding: 0px 14px;
+}
+.breadcrumb-list li:first-child {
+  padding-left: 0px;
+}
+.breadcrumb-list li a {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+}
+.breadcrumb-list li:last-child a {
+  color: #f47425;
+}
+.breadcrumb-list li::before {
+  content: '';
+  position: absolute;
+  right: -4px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #f4f4f4;
+  height: 10px;
+  width: 2px;
+  top: 7px;
+  transform: rotate(23deg);
+}
+.breadcrumb-list li:last-child::before {
+  display: none;
+}
+.breadcrumb-list li:last-child::before {
+  display: none;
+}

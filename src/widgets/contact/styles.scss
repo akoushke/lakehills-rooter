@@ -1,0 +1,64 @@
+.contact-section .section-title-s2 {
+  text-align: left;
+}
+.contact-section .single-input textarea,
+.contact-section .single-input input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 16px;
+  border: 1px solid #cbcbcb;
+}
+.contact-section .single-input textarea {
+  height: 160px;
+  padding-top: 10px;
+  resize: none;
+}
+.contact-section .theme-btn {
+  border: 1px solid #2d2d2d;
+  background: #2d2d2d;
+}
+.contact-section .theme-btn:hover {
+  border: 1px solid #f47425;
+}
+.contact-section .contact-info ul li + li {
+  margin-top: 30px;
+}
+.contact-section .contact-info ul li .single-info {
+  position: relative;
+}
+.contact-info ul li .single-info .info-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.contact-info ul li .single-info .info-icon i {
+  font-size: 24px;
+  color: #fff;
+  background-color: #f47425;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  line-height: 50px;
+}
+.contact-info ul li .single-info .info-content {
+  padding-left: 70px;
+}
+.contact-info ul li .single-info .info-content p {
+  margin: 0;
+}
+.google-map {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.google-map iframe {
+  width: 100%;
+  border: none;
+  height: 200px;
+}

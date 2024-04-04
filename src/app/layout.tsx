@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { Viewport } from 'next';
-import './styles/main.scss';
+import '../styles/main.scss';
 
 export const viewport: Viewport = {
   width: 'device-width',

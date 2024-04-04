@@ -1,0 +1,197 @@
+.service-section-s2 {
+  padding-bottom: 60px;
+  padding-top: 100px;
+  background: url('/pattren.png') center center repeat;
+}
+
+@media (max-width: 991px) {
+  .service-section-s2 {
+    padding-bottom: 40px;
+  }
+}
+.service-section-s2 .service-grids {
+  margin: 0 -15px;
+  margin-top: 25px;
+}
+.service-section-s2 .service-grids .grid {
+  width: calc(33.33% - 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  margin: 0 15px 40px;
+  padding: 25px 30px 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  -webkit-box-shadow: 0 0 25px 0 rgba(41, 61, 88, 0.06);
+  -moz-box-shadow: 0 0 25px 0 rgba(41, 61, 88, 0.06);
+  box-shadow: 0 0 25px 0 rgba(41, 61, 88, 0.06);
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.service-section-s2 .service-grids .grid:hover {
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+}
+
+@media (max-width: 991px) {
+  .service-section-s2 .service-grids .grid {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-section-s2 .service-grids .grid {
+    width: calc(100% - 30px);
+    float: none;
+  }
+}
+.service-section-s2 .grid .icon {
+  position: inherit;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fbfbfb;
+  text-align: center;
+  margin: 0 0 15px;
+  font-size: 30px;
+  line-height: 75px;
+  color: #f47425;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  position: relative;
+  z-index: 0;
+}
+.service-section-s2 .grid .icon:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f47425;
+  content: '';
+  z-index: -1;
+  -ms-transform: scale(0);
+  /* IE 9 */
+  -webkit-transform: scale(0);
+  /* Chrome, Safari, Opera */
+  transform: scale(0);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.service-section-s2 .grid:hover .icon {
+  color: #fff;
+}
+.service-section-s2 .grid:hover .icon:after {
+  visibility: visible;
+  opacity: 1;
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -webkit-transform: scale(1);
+  /* Chrome, Safari, Opera */
+  transform: scale(1);
+}
+.service-section-s2 .icon .fi:before {
+  font-size: 50px;
+  font-size: 3.125rem;
+  color: #f47425;
+}
+
+@media (max-width: 991px) {
+  .service-section-s2 .icon .fi:before {
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
+.service-section-s2 .grid h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.3em;
+  margin: 0 0 0.7em;
+}
+
+@media (max-width: 991px) {
+  .service-section-s2 .grid h3 {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+.service-section-s2 .grid h3 a {
+  color: #333;
+}
+.service-section-s2 .grid h3 a:hover {
+  color: #f47425;
+}
+.service-section-s2 .grid p {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+/*** Single Services ***/
+.services-details-image img {
+  width: 100%;
+}
+.services-details-content h3 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #f47425;
+}
+.services-faq {
+  margin: 40px 0;
+}
+.services-category ul li {
+  margin-bottom: 5px;
+}
+.services-category ul li a {
+  line-height: 50px;
+  padding: 0 35px;
+  background-color: #eee;
+  display: block;
+  font-size: 14px;
+  color: #23282d;
+  -webkit-transition: all 0.4s linear 0s;
+  -moz-transition: all 0.4s linear 0s;
+  -ms-transition: all 0.4s linear 0s;
+  -o-transition: all 0.4s linear 0s;
+  transition: all 0.4s linear 0s;
+}
+.services-category ul li a i {
+  margin-right: 10px;
+}
+.services-contact {
+  background-color: #f47425;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+  margin: 30px 0 0;
+}
+.services-contact img {
+  position: relative;
+  z-index: 9;
+}
+.services-contact h5 {
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  z-index: 9;
+  margin: 20px 0;
+}
+.services-contact > a {
+  font-size: 30px;
+  color: #fff;
+  position: relative;
+  z-index: 9;
+  font-weight: 600;
+}

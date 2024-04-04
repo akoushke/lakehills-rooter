@@ -1,0 +1,80 @@
+.review-section {
+  position: relative;
+  padding: 90px 0px 90px;
+  background: url('/pattren.png') center center repeat;
+  margin: 15px 0 0;
+}
+.section-padding.review-section {
+  margin: 0;
+}
+.review-section .section-title {
+  margin-bottom: 15px;
+}
+
+/* Review Block */
+.review-section.bg-white .reviews-item {
+  background: #f8f8f8;
+}
+.review-section .reviews-item {
+  background-color: #fff;
+  padding: 45px 35px;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.review-section .reviews-item h2 {
+  font-size: 16px;
+  font-size: 1rem;
+  display: inline-block;
+  font-weight: 500;
+}
+.review-section .reviews-item .reviews-stars {
+  display: inline-block;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+.review-section .reviews-item .reviews-stars .icon {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  color: #f47425;
+  margin: 0 0.5px;
+}
+.review-section .reviews-item p {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  color: #a6a6a6;
+  font-family: Poppins, sans-serif;
+  letter-spacing: normal;
+  padding: 0;
+  text-transform: none;
+}
+.review-section .reviews-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin: 0;
+  vertical-align: middle;
+  margin-top: -25px;
+  margin-right: 15px;
+  display: inline-block;
+}
+.review-section .reviews-item h3 {
+  font-size: 14.5px;
+  font-size: 0.90625rem;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  line-height: 25px;
+  display: inline-block;
+}
+.review-section .reviews-item h3 span {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  color: #f47425;
+}
+.review-section .owl-nav {
+  display: none;
+}

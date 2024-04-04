@@ -61,15 +61,13 @@ export default function Header() {
             <div className='navbar-header'>
               <button type='button' className='open-btn'>
                 <span className='sr-only'>Toggle navigation</span>
-                <span className='icon-bar'></span>{' '}
+                <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
               </button>
-              <a className='navbar-brand' href='index.html'>
-                <Image
+              <a className='navbar-brand' href='/'>
+                <img
                   src='/logo/horizontal-logo-white-background.png'
-                  width={500}
-                  height={50}
                   alt='logo'
                 />
               </a>
@@ -83,71 +81,47 @@ export default function Header() {
               </button>
               <ul className='nav navbar-nav'>
                 <li className='active'>
-                  <a href='index.html'>Home</a>
+                  <a href='/'>Home</a>
                 </li>
                 <li>
-                  <a href='about-us.html'>About Us</a>
+                  <a href='/about'>About Us</a>
                 </li>
                 <li className='menu-item-has-children'>
-                  {' '}
                   <a href='#'>Pages</a>
                   <ul className='sub-menu'>
                     <li>
-                      <a href='about-us.html'>About Us</a>
+                      <a href='/faq'>FAQ</a>
                     </li>
                     <li>
-                      <a href='faq.html'>FAQ</a>
+                      <a href='/reviews'>Reviews</a>
                     </li>
                     <li>
-                      <a href='testimonials.html'>Testimonials</a>
-                    </li>
-                    <li>
-                      <a href='team.html'>Team</a>
-                    </li>
-                    <li>
-                      <a href='gallery.html'>Gallery</a>
-                    </li>
-                    <li>
-                      <a href='404.html'>404</a>
+                      <a href='/gallery'>Gallery</a>
                     </li>
                   </ul>
                 </li>
                 <li className='menu-item-has-children'>
-                  {' '}
                   <a href='#'>Services</a>
                   <ul className='sub-menu'>
                     <li>
-                      <a href='services.html'>Services</a>
+                      <a href='/services'>Services</a>
                     </li>
                     <li>
-                      <a href='service-details.html'>Service Details</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className='menu-item-has-children'>
-                  {' '}
-                  <a href='#'>Blog</a>
-                  <ul className='sub-menu'>
-                    <li>
-                      <a href='blog.html'>Blog default</a>
-                    </li>
-                    <li>
-                      <a href='blog-single.html'>Blog single</a>
+                      <a href='/service-details'>Service Details</a>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href='contact-us.html'>Contact Us</a>
+                  <a href='/contact'>Contact Us</a>
                 </li>
               </ul>
             </div>
 
             <div className='cart-contact'>
               <div className='contact-btn hidden-xs'>
-                {' '}
-                <a href='contact-us.html' className='theme-btn'>
+                <a href='/contact' className='theme-btn'>
                   Request Quote
-                </a>{' '}
+                </a>
               </div>
             </div>
           </div>

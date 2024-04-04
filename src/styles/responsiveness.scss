@@ -1,0 +1,115 @@
+@media (min-width: 992px) and (max-width: 1024px) {
+  /** Header **/
+  .header-style-3 .cart-contact {
+    display: none;
+  }
+  /** Footer **/
+  .site-footer .footer-social-menu li a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /** Common Styles **/
+  .section-padding {
+    padding: 90px 0;
+  }
+  .section-title h2 {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+  .section-title > span {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  .section-title-s2 p {
+    font-size: 15px;
+    font-size: 0.9375rem;
+  }
+  /** back to top **/
+  .back-to-top {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+  /** Navigation **/
+  .header-style-3 .cart-contact {
+    right: 85px;
+  }
+  /** Reviews **/
+  .review-section .owl-nav {
+    display: none;
+  }
+  /** Gallery **/
+  .grid_col3 > li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  /** Common Styles **/
+  body {
+    font-size: 14px;
+  }
+  .section-title {
+    margin-bottom: 25px;
+  }
+  .section-title h2 {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+  .section-title-s2 h2 {
+    font-size: 30px;
+    font-size: 1.675rem;
+  }
+  .section-padding {
+    padding: 80px 0;
+  }
+  /** Header **/
+  .site-header .navbar-header .navbar-brand {
+    font-size: 24px;
+  }
+  .site-header #navbar .navbar-nav {
+    margin: 0;
+  }
+  /** Hero Slider **/
+  .hero-slider {
+    height: 500px;
+  }
+  .hero-slider .swiper-container-horizontal > .swiper-pagination-bullets,
+  .hero-slider .swiper-pagination-custom,
+  .hero-slider .swiper-pagination-fraction {
+    bottom: 45px !important;
+  }
+  /** About Us **/
+  .about-section .about-pic-area::before {
+    display: none;
+  }
+  .about-section .about-pic-area img {
+    margin: 0;
+  }
+  /** Services **/
+  .service-section-s2 .service-grids .grid {
+    width: calc(100% - 30px);
+  }
+  .section-title-s2 {
+    margin-bottom: 25px;
+  }
+  /** Gallery **/
+  .gutter_medium {
+    margin: 0 -15px;
+  }
+  .grid_col3 > li {
+    width: 100%;
+  }
+  /** Reviews **/
+  .reviews-carousel .owl-controls .owl-nav [class*='owl-'] {
+    display: none !important;
+  }
+  /** Contact Us **/
+  .contact-section .contact-info {
+    margin: 40px 0 0;
+  }
+}
