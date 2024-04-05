@@ -1,4 +1,5 @@
 import './styles.scss';
+import CONST from '@/lib/constants';
 
 export default function Footer() {
   return (
@@ -18,28 +19,23 @@ export default function Footer() {
                 </p>
                 <ul className='footer-social-menu list-inline'>
                   <li>
-                    <a href=''>
+                    <a href={CONST.FACEBOOK_URL}>
                       <i className='fa fa-facebook'></i>
                     </a>
                   </li>
                   <li>
-                    <a href=''>
+                    <a href={CONST.TWITTER_URL}>
                       <i className='fa fa-twitter'></i>
                     </a>
                   </li>
                   <li>
-                    <a href=''>
+                    <a href={CONST.INSTAGRAM_URL}>
                       <i className='fa fa-instagram'></i>
                     </a>
                   </li>
                   <li>
-                    <a href=''>
+                    <a href={CONST.LINKEDIN_URL}>
                       <i className='fa fa-linkedin-square'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href=''>
-                      <i className='fa fa-skype'></i>
                     </a>
                   </li>
                 </ul>
@@ -52,27 +48,21 @@ export default function Footer() {
                 </div>
                 <ul>
                   <li>
-                    <a href=''>About Us</a>
+                    <a href='/about'>About Us</a>
                   </li>
                   <li>
-                    <a href=''>Our Services</a>
+                    <a href='/services'>Our Services</a>
                   </li>
                   <li>
-                    <a href=''>Blog</a>
-                  </li>
-                  <li>
-                    <a href=''>Contact Us</a>
+                    <a href='/contact'>Contact Us</a>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <a href=''>Reviews</a>
+                    <a href='/reviews'>Reviews</a>
                   </li>
                   <li>
-                    <a href=''>Blog</a>
-                  </li>
-                  <li>
-                    <a href=''>FAQ</a>
+                    <a href='/faq'>FAQ</a>
                   </li>
                 </ul>
               </div>
@@ -82,16 +72,13 @@ export default function Footer() {
                 <div className='widget-title'>
                   <h3>Head office</h3>
                 </div>
-                <p>
-                  125 Big fella St., New York, Hi 5654775, United States of
-                  America
-                </p>
+                <p>{CONST.CONTACT_ADDRESS}</p>
                 <ul>
-                  <li>Phone: 0123456789</li>
+                  <li>Phone: {CONST.CONTACT_PHONE_NUMBER}</li>
                   <li>
                     Email:
-                    <a href='mailto:test@sbtechnosoft.com'>
-                      test@sbtechnosoft.com
+                    <a href={`mailto:${CONST.CONTACT_EMAIL_ADDRESS}`}>
+                      {CONST.CONTACT_EMAIL_ADDRESS}
                     </a>
                   </li>
                   <li>Office Time: 9 a.m.- 6 p.m.</li>
@@ -138,27 +125,27 @@ export default function Footer() {
               <div className='social-icons'>
                 <ul>
                   <li>
-                    <a href='#'>
+                    <a href={CONST.FACEBOOK_URL}>
                       <i className='ti-facebook'></i>
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a href={CONST.TWITTER_URL}>
                       <i className='ti-twitter-alt'></i>
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a href={CONST.LINKEDIN_URL}>
                       <i className='ti-linkedin'></i>
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a href={CONST.PINTEREST_URL}>
                       <i className='ti-pinterest'></i>
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a href={CONST.VIMEO_URL}>
                       <i className='ti-vimeo-alt'></i>
                     </a>
                   </li>

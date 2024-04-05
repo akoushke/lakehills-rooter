@@ -1,3 +1,4 @@
+import CONST from '@/lib/constants';
 import './styles.scss';
 
 export default function CTA() {
@@ -13,8 +14,9 @@ export default function CTA() {
                 industry
               </p>
               <div className='phone-btn'>
-                <span>+0123456789</span> <span className='mid-text'>or</span>
-                <a href='#' className='theme-btn'>
+                <span>{CONST.CONTACT_PHONE_NUMBER}</span>{' '}
+                <span className='mid-text'>or</span>
+                <a href='/contact' className='theme-btn'>
                   Contact us
                 </a>
               </div>

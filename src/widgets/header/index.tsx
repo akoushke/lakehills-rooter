@@ -1,3 +1,5 @@
+import CONST from '@/lib/constants';
+
 import './styles.scss';
 
 type Props = {
@@ -18,14 +20,14 @@ export default function Header({ slug }: Props) {
                 <div className='contact-info'>
                   <ul>
                     <li>
-                      <i className='ti-email'></i> support@sbtechnosoft.com
+                      <i className='ti-email'></i> {CONST.CONTACT_EMAIL_ADDRESS}
                     </li>
                     <li>
-                      <i className='ti-mobile'></i> +0123456789
+                      <i className='ti-mobile'></i> {CONST.CONTACT_PHONE_NUMBER}
                     </li>
                     <li>
-                      <i className='ti-location-pin'></i> 55 no street, outline
-                      Austria
+                      <i className='ti-location-pin'></i>{' '}
+                      {CONST.CONTACT_ADDRESS}
                     </li>
                   </ul>
                 </div>
@@ -35,22 +37,22 @@ export default function Header({ slug }: Props) {
                   <div className='social-links'>
                     <ul>
                       <li>
-                        <a href='#'>
+                        <a href={CONST.FACEBOOK_URL}>
                           <i className='ti-facebook'></i>
                         </a>
                       </li>
                       <li>
-                        <a href='#'>
+                        <a href={CONST.TWITTER_URL}>
                           <i className='ti-twitter-alt'></i>
                         </a>
                       </li>
                       <li>
-                        <a href='#'>
+                        <a href={CONST.VIMEO_URL}>
                           <i className='ti-vimeo-alt'></i>
                         </a>
                       </li>
                       <li>
-                        <a href='#'>
+                        <a href={CONST.PINTEREST_URL}>
                           <i className='ti-pinterest'></i>
                         </a>
                       </li>

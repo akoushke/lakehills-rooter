@@ -23,7 +23,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <PageHeading pageTitle={params.slug} />
+      <PageHeading pageTitle={params.slug.replace('-', ' ')} />
       {!isReview ? pages.get(params.slug) || <Custom404 /> : null}
       {!isReview && <CTA />}
       <Review />
