@@ -5,7 +5,7 @@ import Header from '@/widgets/header';
 import { CSSTransition } from 'react-transition-group';
 import { useEffect, useRef, useState } from 'react';
 import Preloader from '@/widgets/preloader';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 type Props = {
   children: React.ReactNode;
@@ -13,30 +13,36 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   const nodeRef = useRef(null);
-  const router = useRouter();
-  const [show, setShow] = useState(false);
+  const [Loading, setLoading] = useState(false);
+  const [enableOverlay, setEnableOverlay] = useState(false);
   const slug = usePathname();
 
   useEffect(() => {
-    setShow(true);
+    setLoading(true);
   }, [slug]);
 
   return (
     <>
       <CSSTransition
-        in={show}
+        in={Loading}
         nodeRef={nodeRef}
         timeout={500}
         classNames='layout'
         unmountOnExit
       >
-        <main ref={nodeRef}>
-          <Header slug={slug.replace('/', '')} />
+        <div
+          ref={nodeRef}
+          className={`page-wrapper ${enableOverlay ? 'body-overlay' : ''}`}
+        >
+          <Header
+            slug={slug.replace('/', '')}
+            setEnableOverlay={setEnableOverlay}
+          />
           {children}
           <Footer />
-        </main>
+        </div>
       </CSSTransition>
-      {!show && <Preloader />}
+      {!Loading && <Preloader />}
     </>
   );
 }

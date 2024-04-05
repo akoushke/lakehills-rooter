@@ -1,14 +1,21 @@
 import CONST from '@/lib/constants';
+import { useState } from 'react';
 
 import './styles.scss';
 
 type Props = {
   slug: string;
+  setEnableOverlay: (enableOverlay: boolean) => void;
 };
 
-export default function Header({ slug }: Props) {
+export default function Header({ slug, setEnableOverlay }: Props) {
   const pageMenuLinks = ['faq', 'gallery', 'reviews'];
   const servicesMenuLinks = ['services', 'service-details'];
+  const [showNav, setShowNav] = useState(false);
+  const displayNav = (show: boolean) => {
+    setShowNav(show);
+    setEnableOverlay(show);
+  };
 
   return (
     <>
@@ -66,7 +73,11 @@ export default function Header({ slug }: Props) {
         <nav className='navigation navbar navbar-default'>
           <div className='container'>
             <div className='navbar-header'>
-              <button type='button' className='open-btn'>
+              <button
+                type='button'
+                className='open-btn'
+                onClick={() => displayNav(true)}
+              >
                 <span className='sr-only'>Toggle navigation</span>
                 <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
@@ -81,9 +92,12 @@ export default function Header({ slug }: Props) {
             </div>
             <div
               id='navbar'
-              className='navbar-collapse collapse navbar-right navigation-holder'
+              className={`navbar-collapse collapse navbar-right navigation-holder ${showNav && 'slideInn'}`}
             >
-              <button className='close-navbar'>
+              <button
+                className='close-navbar'
+                onClick={() => displayNav(false)}
+              >
                 <i className='ti-close'></i>
               </button>
               <ul className='nav navbar-nav'>
