@@ -1,8 +1,13 @@
-import Image from 'next/image';
-
 import './styles.scss';
 
-export default function Header() {
+type Props = {
+  slug: string;
+};
+
+export default function Header({ slug }: Props) {
+  const pageMenuLinks = ['faq', 'gallery', 'reviews'];
+  const servicesMenuLinks = ['services', 'service-details'];
+
   return (
     <>
       <header id='header' className='site-header header-style-3'>
@@ -80,38 +85,44 @@ export default function Header() {
                 <i className='ti-close'></i>
               </button>
               <ul className='nav navbar-nav'>
-                <li className='active'>
+                <li className={slug === '' ? 'active' : ''}>
                   <a href='/'>Home</a>
                 </li>
-                <li>
+                <li className={slug === 'about' ? 'active' : ''}>
                   <a href='/about'>About Us</a>
                 </li>
-                <li className='menu-item-has-children'>
+                <li
+                  className={`menu-item-has-children ${pageMenuLinks.includes(slug) ? 'active' : ''}`}
+                >
                   <a href='#'>Pages</a>
                   <ul className='sub-menu'>
-                    <li>
+                    <li className={`${slug == 'faq' ? 'active' : ''}`}>
                       <a href='/faq'>FAQ</a>
                     </li>
-                    <li>
+                    <li className={`${slug == 'reviews' ? 'active' : ''}`}>
                       <a href='/reviews'>Reviews</a>
                     </li>
-                    <li>
+                    <li className={`${slug == 'gallery' ? 'active' : ''}`}>
                       <a href='/gallery'>Gallery</a>
                     </li>
                   </ul>
                 </li>
-                <li className='menu-item-has-children'>
+                <li
+                  className={`menu-item-has-children ${servicesMenuLinks.includes(slug) ? 'active' : ''}`}
+                >
                   <a href='#'>Services</a>
                   <ul className='sub-menu'>
-                    <li>
+                    <li className={`${slug == 'services' ? 'active' : ''}`}>
                       <a href='/services'>Services</a>
                     </li>
-                    <li>
+                    <li
+                      className={`${slug == 'service-details' ? 'active' : ''}`}
+                    >
                       <a href='/service-details'>Service Details</a>
                     </li>
                   </ul>
                 </li>
-                <li>
+                <li className={slug === 'contact' ? 'active' : ''}>
                   <a href='/contact'>Contact Us</a>
                 </li>
               </ul>

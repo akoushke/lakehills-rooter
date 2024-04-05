@@ -26,12 +26,11 @@
   -ms-transition: all 0.5s;
   transition: all 0.5s; /*** mega-menu style ***/
 }
-.site-header #navbar > ul li a:hover,
-.site-header #navbar > ul li a:focus {
+.site-header #navbar > ul li a:hover {
   text-decoration: none;
   color: #f47425 !important;
 }
-.site-header #navbar > ul li.active a {
+.site-header #navbar > ul li.active > a {
   color: #f47425 !important;
   background: none;
 }
