@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import type { Viewport } from 'next';
 import '../styles/main.scss';
 
+// inject jquery globally
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,

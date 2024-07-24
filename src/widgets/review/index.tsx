@@ -1,6 +1,35 @@
+import OwlCarousel from '../owl-carousel';
+
 import './styles.scss';
 
 export default function Review() {
+  const options = {
+    items: 3,
+    loop: true,
+    autoplay: true,
+    margin: 30,
+    nav: true,
+    navText: [
+      '<i class="fi flaticon-back"></i>',
+      '<i class="fi flaticon-next"></i>',
+    ],
+    smartSpeed: 500,
+    responsive: {
+      0: {
+        items: 1,
+      },
+
+      650: {
+        items: 2,
+        center: false,
+        margin: 10,
+      },
+
+      992: {
+        items: 3,
+      },
+    },
+  };
   return (
     <section className='review-section'>
       <div className='container'>
@@ -12,7 +41,7 @@ export default function Review() {
             industry lorem Ipsum has been the industry's standard dummy text
           </p>
         </div>
-        <div className='reviews-carousel owl-carousel owl-theme'>
+        <OwlCarousel className='owl-theme' {...options}>
           <div className='reviews-item'>
             <h2>Awesome Service</h2>
             <div className='reviews-stars'>
@@ -155,7 +184,7 @@ export default function Review() {
               <span>USA Citizen</span>
             </h3>
           </div>
-        </div>
+        </OwlCarousel>
       </div>
     </section>
   );

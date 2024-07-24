@@ -35,7 +35,7 @@ export default function Carousel() {
           disableOnInteraction: false,
         }}
         slidesPerView={1}
-        onSlideChange={() => console.log('slide change')}
+        onSlideChange={() => console.log()}
         onTouchStart={(swiper) => {
           for (var i = 0; i < swiper.slides.length; i++) {
             swiper.slides[i].style.transition = '';
