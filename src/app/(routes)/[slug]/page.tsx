@@ -6,7 +6,6 @@ import Review from '@/widgets/review';
 import PageHeading from '@/widgets/page-heading';
 import Custom404 from '@/widgets/404';
 import ServiceDetails from '@/widgets/service-details';
-import Gallery from '@/widgets/gallery';
 import Contact from '@/widgets/contact';
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -15,7 +14,6 @@ export default function Page({ params }: { params: { slug: string } }) {
     ['faq', <FAQ key='faq' />],
     ['services', <Service key='services' />],
     ['service-details', <ServiceDetails key='service-details' />],
-    ['gallery', <Gallery key='gallery' />],
     ['contact', <Contact key='contact' />],
   ]);
 

@@ -118,9 +118,6 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                     <li className={`${slug == 'reviews' ? 'active' : ''}`}>
                       <a href='/reviews'>Reviews</a>
                     </li>
-                    <li className={`${slug == 'gallery' ? 'active' : ''}`}>
-                      <a href='/gallery'>Gallery</a>
-                    </li>
                   </ul>
                 </li>
                 <li
