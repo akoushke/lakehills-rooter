@@ -22,14 +22,10 @@ content:
         label: Slide information
         type: object
         fields:
-          - name: ID
-            label: ID
+          - name: id
+            label: id
             type: string
           - name: body
             label: body
             type: string
             options: { maxlength: 160 }
-          - name: image
-            label: image
-            type: string
-           
