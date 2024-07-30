@@ -11,13 +11,17 @@ content:
         required: true
       - { name: date, label: Date, type: date }
       - { name: description, label: Description, type: string, options: { maxlength: 160 } }
-      - name: contact 
-        label: Contact information
+      - name: Slides
+        label: Slides information
         type: object
         fields:
-          - name: first_name
-            label: First name
+          - name: id
+            label: id
             type: string
-          - name: last_name
-            label: Last name
+          - name: body
+            label: heading
+            type: string
+            options: { maxlength: 160 }
+          - name: image
+            label: image
             type: string
