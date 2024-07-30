@@ -7,4 +7,10 @@ content:
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: date, label: Date, type: date }
-      - { name: items, label: Body, type: rich-text }
+     -  { name: contact, 
+          label: Contact information, type: object,
+          fields:
+            - name: first_name
+              name: First name
+              type: string
+          }
