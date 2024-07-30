@@ -18,10 +18,6 @@ content:
           - name: id
             label: id
             type: string
-          - name: subheading
-            label: subheading
-            type: string
-            options: { maxlength: 160 }
           - name: image
             label: image
             type: string
