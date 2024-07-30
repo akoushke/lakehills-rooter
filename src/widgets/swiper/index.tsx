@@ -27,7 +27,7 @@ export default function Carousel() {
         const { items } = await response.json();
         const slides = items.map((item: any) => ({
           body: item.slide.body,
-          image: item.slide.image,
+          image: item.cover,
         }));
 
         setSlides(slides);
