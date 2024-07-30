@@ -8,13 +8,14 @@ import Slide from './Slides/slide';
 import { SwiperOptions } from 'swiper/types';
 
 interface SlideType {
+  ID: string;
   body: string;
   image: string;
 }
 
 export default function Carousel() {
   const [slides, setSlides] = useState<Array<SlideType>>([]);
-  const fileName = 'slides';
+  const fileName = 'slide';
 
   useEffect(() => {
     const fetchMarkdownData = async () => {
@@ -23,8 +24,13 @@ export default function Carousel() {
         if (!response.ok) {
           throw new Error('File not found');
         }
-        const { data } = await response.json();
-        setSlides(data.slides);
+        const { items } = await response.json();
+        const slides = items.map((item: any) => ({
+          body: item.slide.body,
+          image: item.slide.image,
+        }));
+
+        setSlides(slides);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -91,7 +97,6 @@ export default function Carousel() {
     <section className='hero-slider  hero-style-3'>
       <Swiper {...slideOpts}>
         {slidesComps}
-
         <div className='swiper-pagination'></div>
         <i className='swiper-button-next fi-rr-arrow-right'></i>
         <i className='swiper-button-prev fi-rr-arrow-left'></i>

@@ -16,16 +16,19 @@ export async function GET(
   const files = fs.readdirSync(dataDirectory);
 
   const regex = new RegExp(`.*${slug}.*\\.md$`, 'i');
-  const fileName = files.find((file) => regex.test(file));
+  const fileNames = files.filter((file) => regex.test(file));
 
-  if (!fileName) {
+  if (!fileNames.length) {
     return NextResponse.json({ message: 'File Not Found!' }, { status: 404 });
   }
 
-  const filePath = path.join(dataDirectory, fileName);
-  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const items = fileNames.map((fileName: string) => {
+    const filePath = path.join(dataDirectory, fileName);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const { data } = matter(fileContents);
 
-  const { content, data } = matter(fileContents);
+    return data;
+  });
 
-  return NextResponse.json({ content, data }, { status: 200 });
+  return NextResponse.json({ items }, { status: 200 });
 }
