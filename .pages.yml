@@ -19,7 +19,7 @@ content:
             label: id
             type: string
           - name: body
-            label: body
+            label: subheading
             type: string
             options: { maxlength: 160 }
           - name: image
