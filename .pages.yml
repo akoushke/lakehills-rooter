@@ -18,6 +18,3 @@ content:
           - name: id
             label: id
             type: string
-          - name: image
-            label: image
-            type: string
