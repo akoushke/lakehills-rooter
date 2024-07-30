@@ -14,7 +14,3 @@ content:
       - name: Slides
         label: Slides information
         type: object
-        fields:
-          - name: id
-            label: id
-            type: string
