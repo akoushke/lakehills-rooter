@@ -16,7 +16,7 @@ content:
         list: true
         type: image
         options:
-          path: src/media/screenshots
+          path: src/files/images
           extensions: [ jpg, jpeg, png ]
       - name: slide
         label: Slide information
