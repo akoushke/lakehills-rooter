@@ -19,12 +19,11 @@ content:
             label: Slide 1
             type: object
             fields:
-              - name: cover
-                label: Cover
-                type: image
-                options:
-                  path: src/files/images
-                  extensions: [ jpg, jpeg, png ]
+              - name: slide
+                label: slide
+                type: string
+                options: { maxlength: 160 }
+             
       - name: features
         label: Features
         type: object
