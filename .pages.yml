@@ -15,14 +15,14 @@ content:
         label: Slides
         type: object
         fields:
-          - name: slide1
-            label: Slide 1
+          - name: feature1
+            label: Feature 1
             type: object
             fields:
-              - name: slide
-                label: slide
-                type: string
-                options: { maxlength: 160 }
+            - name: feature
+              label: feature  title
+              type: string
+              options: { maxlength: 160 }
              
       - name: features
         label: Features
