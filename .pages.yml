@@ -37,3 +37,9 @@ content:
             options:
               path: src/files/images
               extensions: [ jpg, jpeg, png ]
+          - name: cover3
+            label: Cover 3 
+            type: image
+            options:
+              path: src/files/images
+              extensions: [ jpg, jpeg, png ]
