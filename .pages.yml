@@ -45,3 +45,20 @@ content:
             options:
               path: src/files/images
               extensions: [ jpg, jpeg, png ]
+      - name: features
+        label: Features
+        type: object
+        fields:
+          - name: feature1
+            label: feature 1 title
+            type: string
+            options: { maxlength: 160 }
+          - name: feature1
+            label: feature 1 body
+            type: string
+            options: { maxlength: 160 }
+          - name: feature1
+            label: feature 1 icon
+            type: string
+            options: { maxlength: 160 }
+            
