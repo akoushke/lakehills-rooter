@@ -37,6 +37,10 @@ content:
             options:
               path: src/files/images
               extensions: [ jpg, jpeg, png ]
+          - name: slide3
+            label: slide 3 body
+            type: string
+            options: { maxlength: 160 }
           - name: cover3
             label: Cover 3 
             type: image
