@@ -17,25 +17,22 @@ content:
         label: Slides
         type: object
         fields:
-          - name: slide 1 body
-            label: body
+          - name: slide1
+            label: slide 1 body
             type: string
             options: { maxlength: 160 }
-          - name: cover
-            label: Cover
+          - name: cover1
+            label: Cover 1 
             type: image
             options:
               path: src/files/images
               extensions: [ jpg, jpeg, png ]
-         - name: id
-            label: id
-            type: string
-          - name: body
-            label: body
+          - name: slide2
+            label: slide 2 body
             type: string
             options: { maxlength: 160 }
-          - name: cover
-            label: Cover
+          - name: cover2
+            label: Cover 2 
             type: image
             options:
               path: src/files/images
