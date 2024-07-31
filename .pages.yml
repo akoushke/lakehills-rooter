@@ -11,8 +11,6 @@ content:
         label: Title
         type: string
         required: true
-      - { name: date, label: Date, type: date }
-      - { name: description, label: Description, type: string, options: { maxlength: 160 } }
       - name: slide
         label: Slides
         type: object
