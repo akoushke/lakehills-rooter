@@ -29,34 +29,6 @@ content:
                 options:
                   path: src/files/images
                   extensions: [ jpg, jpeg, png ]
-          - name: slide2
-            label: Slide 2
-            type: object
-            fields:
-              - name: slide
-                label: slide
-                type: string
-                options: { maxlength: 160 }
-              - name: cover
-                label: Cover
-                type: image
-                options:
-                  path: src/files/images
-                  extensions: [ jpg, jpeg, png ]
-          - name: slide3
-            label: Slide 3
-            type: object
-            fields:
-                - name: slide
-                  label: slide
-                  type: string
-                  options: { maxlength: 160 }
-                - name: cover
-                  label: Cover
-                  type: image
-                  options:
-                    path: src/files/images
-                    extensions: [ jpg, jpeg, png ]
       - name: features
         label: Features
         type: object
