@@ -16,35 +16,47 @@ content:
         type: object
         fields:
           - name: slide1
-            label: slide 1 body
-            type: string
-            options: { maxlength: 160 }
-          - name: cover1
-            label: Cover 1 
-            type: image
-            options:
-              path: src/files/images
-              extensions: [ jpg, jpeg, png ]
+            label: Slide 1
+            type: object
+            fields:
+              - name: slide
+                label: slide
+                type: string
+                options: { maxlength: 160 }
+              - name: cover
+                label: Cover
+                type: image
+                options:
+                  path: src/files/images
+                  extensions: [ jpg, jpeg, png ]
           - name: slide2
-            label: slide 2 body
-            type: string
-            options: { maxlength: 160 }
-          - name: cover2
-            label: Cover 2 
-            type: image
-            options:
-              path: src/files/images
-              extensions: [ jpg, jpeg, png ]
+            label: Slide 2
+            type: object
+            fields:
+              - name: slide
+                label: slide
+                type: string
+                options: { maxlength: 160 }
+              - name: cover
+                label: Cover
+                type: image
+                options:
+                  path: src/files/images
+                  extensions: [ jpg, jpeg, png ]
           - name: slide3
-            label: slide 3 body
-            type: string
-            options: { maxlength: 160 }
-          - name: cover3
-            label: Cover 3 
-            type: image
-            options:
-              path: src/files/images
-              extensions: [ jpg, jpeg, png ]
+            label: Slide 3
+            type: object
+            fields:
+                - name: slide
+                  label: slide
+                  type: string
+                  options: { maxlength: 160 }
+                - name: cover
+                  label: Cover
+                  type: image
+                  options:
+                    path: src/files/images
+                    extensions: [ jpg, jpeg, png ]
       - name: features
         label: Features
         type: object
