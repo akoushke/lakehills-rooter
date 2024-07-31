@@ -23,12 +23,6 @@ content:
               label: slide  title
               type: string
               options: { maxlength: 160 }
-            - name: cover
-              label: slide  cover
-              type: image
-              options:
-                  path: src/files/images
-                  extensions: [ jpg, jpeg, png ]
       - name: features
         label: Features
         type: object
