@@ -66,27 +66,18 @@ content:
               type: string
             options: { maxlength: 160 }
           - name: feature2
-            label: feature 2 title
-            type: string
+            label: Feature 2
+            type: object
+            fields:
+            - name: feature
+              label: feature  title
+              type: string
+              options: { maxlength: 160 }
+            - name: feature
+              label: feature  body
+              type: string
+              options: { maxlength: 160 }
+            - name: feature1
+              label: feature  icon
+              type: string
             options: { maxlength: 160 }
-          - name: feature2
-            label: feature 2 body
-            type: string
-            options: { maxlength: 160 }
-          - name: feature2
-            label: feature 2 icon
-            type: string
-            options: { maxlength: 160 }
-          - name: feature3
-            label: feature 3 title
-            type: string
-            options: { maxlength: 160 }
-          - name: feature3
-            label: feature 3 body
-            type: string
-            options: { maxlength: 160 }
-          - name: feature3
-            label: feature 3 icon
-            type: string
-            options: { maxlength: 160 }
-            
