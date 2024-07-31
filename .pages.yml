@@ -11,26 +11,24 @@ content:
         label: Title
         type: string
         required: true
-      - name: features
-        label: Features
+      - name: slide
+        label: Slides
         type: object
         fields:
-          - name: feature1
-            label: Feature 1
+          - name: slide1
+            label: Slide 1
             type: object
             fields:
-            - name: feature
-              label: feature  title
+            - name: slide
+              label: slide  title
               type: string
               options: { maxlength: 160 }
-            - name: feature
-              label: feature  body
-              type: string
-              options: { maxlength: 160 }
-            - name: feature1
-              label: feature  icon
-              type: string
-              options: { maxlength: 160 }
+            - name: cover
+              label: slide  cover
+              type: image
+              options:
+                  path: src/files/images
+                  extensions: [ jpg, jpeg, png ]
       - name: features
         label: Features
         type: object
