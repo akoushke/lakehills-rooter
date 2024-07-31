@@ -14,10 +14,20 @@ content:
       - { name: date, label: Date, type: date }
       - { name: description, label: Description, type: string, options: { maxlength: 160 } }
       - name: slide
-        label: Slide information
+        label: Slides
         type: object
         fields:
-          - name: id
+          - name: slide 1 body
+            label: body
+            type: string
+            options: { maxlength: 160 }
+          - name: cover
+            label: Cover
+            type: image
+            options:
+              path: src/files/images
+              extensions: [ jpg, jpeg, png ]
+         - name: id
             label: id
             type: string
           - name: body
