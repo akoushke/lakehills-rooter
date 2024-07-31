@@ -19,10 +19,10 @@ content:
             label: Slide 1
             type: object
             fields:
-            - name: slide
-              label: slide
-              type: string
-              options: { maxlength: 160 }
+              - name: slide
+                label: slide
+                type: string
+                options: { maxlength: 160 }
              
       - name: features
         label: Features
