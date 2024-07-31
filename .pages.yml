@@ -13,12 +13,6 @@ content:
         required: true
       - { name: date, label: Date, type: date }
       - { name: description, label: Description, type: string, options: { maxlength: 160 } }
-      - name: cover
-        label: Cover
-        type: image
-        options:
-          path: src/files/images
-          extensions: [ jpg, jpeg, png ]
       - name: slide
         label: Slide information
         type: object
@@ -30,3 +24,9 @@ content:
             label: body
             type: string
             options: { maxlength: 160 }
+          - name: cover
+            label: Cover
+            type: image
+            options:
+              path: src/files/images
+              extensions: [ jpg, jpeg, png ]
