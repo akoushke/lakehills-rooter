@@ -64,9 +64,25 @@ content:
             - name: feature1
               label: feature  icon
               type: string
-            options: { maxlength: 160 }
+              options: { maxlength: 160 }
           - name: feature2
             label: Feature 2
+            type: object
+            fields:
+            - name: feature
+              label: feature  title
+              type: string
+              options: { maxlength: 160 }
+            - name: feature
+              label: feature  body
+              type: string
+              options: { maxlength: 160 }
+            - name: feature1
+              label: feature  icon
+              type: string
+              options: { maxlength: 160 }
+          - name: feature3
+            label: Feature 3
             type: object
             fields:
             - name: feature
