@@ -23,7 +23,6 @@ content:
                 label: feature  title
                 type: string
                 options: { maxlength: 160 }
-             
       - name: features
         label: Features
         type: object
