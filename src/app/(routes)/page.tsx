@@ -1,3 +1,5 @@
+'use client';
+
 import Preloader from '@/widgets/preloader';
 import Carousel from '@/widgets/swiper';
 import Feature from '@/widgets/feature';
@@ -8,7 +10,10 @@ import Portfolio from '@/widgets/portfolio';
 import FunFact from '@/widgets/fun-fact';
 import Review from '@/widgets/review';
 
+import { useFetchMarkdown } from '@/hooks';
+
 export default function Home() {
+  // const markdownData = useFetchMarkdown('home');
   return (
     <main>
       <Carousel />

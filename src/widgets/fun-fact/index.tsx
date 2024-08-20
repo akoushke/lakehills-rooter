@@ -1,14 +1,27 @@
 'use client';
 import CountUp from 'react-countup';
-
+import { FUN_FACT } from '@/lib/constants';
 import './styles.scss';
+import { useEffect, useState } from 'react';
 
-const MAX_NUMBER_OF_PROJECTS = 500;
-const MAX_NUMBER_OF_YEARS_OF_EXPERIENCE = 250;
-const MAX_NUMBER_OF_AWARDS = 15;
-const MAX_PERCENTAGE_OF_HAPPY_CLIENTS = 100;
-const TIMER_DURATION = 2;
+type FactType = {
+  title: string;
+  body: string;
+  image: string;
+  projects: number;
+  years: number;
+  awards: number;
+  clients: number;
+  time: number;
+};
+
 export default function FunFact() {
+  const [fact, setFact] = useState({} as FactType);
+
+  useEffect(() => {
+    setFact(FUN_FACT);
+  }, []);
+
   return (
     <section className='fun-fact-section'>
       <div className='container'>
@@ -20,8 +33,8 @@ export default function FunFact() {
                   <h3>
                     <span className='counter'>
                       <CountUp
-                        duration={TIMER_DURATION}
-                        end={MAX_NUMBER_OF_PROJECTS}
+                        duration={fact.time}
+                        end={fact.projects}
                         enableScrollSpy
                       />
                     </span>
@@ -35,8 +48,8 @@ export default function FunFact() {
                   <h3>
                     <span className='counter'>
                       <CountUp
-                        duration={TIMER_DURATION}
-                        end={MAX_NUMBER_OF_YEARS_OF_EXPERIENCE}
+                        duration={fact.time}
+                        end={fact.years}
                         enableScrollSpy
                       />
                     </span>
@@ -50,8 +63,8 @@ export default function FunFact() {
                   <h3>
                     <span className='counter'>
                       <CountUp
-                        duration={TIMER_DURATION}
-                        end={MAX_NUMBER_OF_AWARDS}
+                        duration={fact.time}
+                        end={fact.awards}
                         enableScrollSpy
                       />
                     </span>
@@ -65,8 +78,8 @@ export default function FunFact() {
                   <h3>
                     <span className='counter'>
                       <CountUp
-                        duration={TIMER_DURATION}
-                        end={MAX_PERCENTAGE_OF_HAPPY_CLIENTS}
+                        duration={fact.time}
+                        end={fact.clients}
                         enableScrollSpy
                       />
                     </span>

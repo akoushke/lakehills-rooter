@@ -1,4 +1,12 @@
-import CONST from '@/lib/constants';
+import {
+  CONTACT_ADDRESS,
+  CONTACT_EMAIL_ADDRESS,
+  CONTACT_PHONE_NUMBER,
+  FACEBOOK_URL,
+  TWITTER_URL,
+  VIMEO_URL,
+  PINTEREST_URL,
+} from '@/lib/constants';
 import { useState } from 'react';
 
 import './styles.scss';
@@ -27,14 +35,13 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                 <div className='contact-info'>
                   <ul>
                     <li>
-                      <i className='ti-email'></i> {CONST.CONTACT_EMAIL_ADDRESS}
+                      <i className='ti-email'></i> {CONTACT_EMAIL_ADDRESS}
                     </li>
                     <li>
-                      <i className='ti-mobile'></i> {CONST.CONTACT_PHONE_NUMBER}
+                      <i className='ti-mobile'></i> {CONTACT_PHONE_NUMBER}
                     </li>
                     <li>
-                      <i className='ti-location-pin'></i>{' '}
-                      {CONST.CONTACT_ADDRESS}
+                      <i className='ti-location-pin'></i> {CONTACT_ADDRESS}
                     </li>
                   </ul>
                 </div>
@@ -44,22 +51,22 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                   <div className='social-links'>
                     <ul>
                       <li>
-                        <a href={CONST.FACEBOOK_URL}>
+                        <a href={FACEBOOK_URL}>
                           <i className='ti-facebook'></i>
                         </a>
                       </li>
                       <li>
-                        <a href={CONST.TWITTER_URL}>
+                        <a href={TWITTER_URL}>
                           <i className='ti-twitter-alt'></i>
                         </a>
                       </li>
                       <li>
-                        <a href={CONST.VIMEO_URL}>
+                        <a href={VIMEO_URL}>
                           <i className='ti-vimeo-alt'></i>
                         </a>
                       </li>
                       <li>
-                        <a href={CONST.PINTEREST_URL}>
+                        <a href={PINTEREST_URL}>
                           <i className='ti-pinterest'></i>
                         </a>
                       </li>
@@ -84,10 +91,7 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                 <span className='icon-bar'></span>
               </button>
               <a className='navbar-brand' href='/'>
-                <img
-                  src='/logo/horizontal-logo-white-background.png'
-                  alt='logo'
-                />
+                <img src='/logo/transparent.png' alt='logo' />
               </a>
             </div>
             <div

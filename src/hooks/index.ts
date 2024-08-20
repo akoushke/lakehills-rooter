@@ -1,3 +1,3 @@
-import useOnScreen from './useOnScreen';
+import useFetchMarkdown from './useFetchMarkdown';
 
-export { useOnScreen };
+export { useFetchMarkdown };

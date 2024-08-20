@@ -1,73 +1,26 @@
+import React, { useState, useEffect } from 'react';
 import './styles.scss';
+import { FEATURES } from '@/lib/constants';
+import { CardType } from '@/lib/types';
+import Card from './card';
 
 export default function Feature() {
+  const [cards, setCards] = useState<Array<CardType>>([]);
+
+  const cardsComps = cards.map(({ body, icon, title }: CardType, index) => (
+    <Card key={index} body={body} icon={icon} title={title} />
+  ));
+
+  useEffect(() => {
+    setCards(FEATURES);
+    return () => {};
+  }, []);
+
   return (
     <section className='features-wrapper'>
       <div className='container'>
         <div className='row box-shadow2 bg-white featured-box'>
-          <div className='col-sm-4'>
-            <div className='featured-icon-box text-center'>
-              <div className='featured-icon'>
-                <i className='ti ti-settings'></i>
-              </div>
-              <div className='featured-content'>
-                <div className='featured-title'>
-                  <h5>Who we are</h5>
-                </div>
-                <div className='featured-desc'>
-                  <p>
-                    Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                    tempor
-                  </p>
-                  <a className='btn' href='#'>
-                    More Services<i className='ti ti-arrow-right'></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='col-sm-4 box-shadow2'>
-            <div className='featured-icon-box text-center'>
-              <div className='featured-icon'>
-                <i className='ti ti-user'></i>
-              </div>
-              <div className='featured-content'>
-                <div className='featured-title'>
-                  <h5>What we do</h5>
-                </div>
-                <div className='featured-desc'>
-                  <p>
-                    Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                    tempor
-                  </p>
-                  <a className='btn' href='#'>
-                    More Services<i className='ti ti-arrow-right'></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='col-sm-4'>
-            <div className='featured-icon-box text-center'>
-              <div className='featured-icon'>
-                <i className='ti ti-thumb-up'></i>
-              </div>
-              <div className='featured-content'>
-                <div className='featured-title'>
-                  <h5>Why Choose Us?</h5>
-                </div>
-                <div className='featured-desc'>
-                  <p>
-                    Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                    tempor
-                  </p>
-                  <a className='btn' href='#'>
-                    More Services<i className='ti ti-arrow-right'></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {cardsComps}
         </div>
       </div>
     </section>

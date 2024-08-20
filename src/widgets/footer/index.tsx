@@ -1,5 +1,15 @@
 import './styles.scss';
-import CONST from '@/lib/constants';
+import {
+  FACEBOOK_URL,
+  TWITTER_URL,
+  LINKEDIN_URL,
+  INSTAGRAM_URL,
+  PINTEREST_URL,
+  VIMEO_URL,
+  CONTACT_EMAIL_ADDRESS,
+  CONTACT_PHONE_NUMBER,
+  CONTACT_ADDRESS,
+} from '@/lib/constants';
 
 export default function Footer() {
   return (
@@ -19,22 +29,22 @@ export default function Footer() {
                 </p>
                 <ul className='footer-social-menu list-inline'>
                   <li>
-                    <a href={CONST.FACEBOOK_URL}>
+                    <a href={FACEBOOK_URL}>
                       <i className='fa fa-facebook'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={CONST.TWITTER_URL}>
+                    <a href={TWITTER_URL}>
                       <i className='fa fa-twitter'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={CONST.INSTAGRAM_URL}>
+                    <a href={INSTAGRAM_URL}>
                       <i className='fa fa-instagram'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={CONST.LINKEDIN_URL}>
+                    <a href={LINKEDIN_URL}>
                       <i className='fa fa-linkedin-square'></i>
                     </a>
                   </li>
@@ -72,13 +82,13 @@ export default function Footer() {
                 <div className='widget-title'>
                   <h3>Head office</h3>
                 </div>
-                <p>{CONST.CONTACT_ADDRESS}</p>
+                <p>{CONTACT_ADDRESS}</p>
                 <ul>
-                  <li>Phone: {CONST.CONTACT_PHONE_NUMBER}</li>
+                  <li>Phone: {CONTACT_PHONE_NUMBER}</li>
                   <li>
                     Email:
-                    <a href={`mailto:${CONST.CONTACT_EMAIL_ADDRESS}`}>
-                      {CONST.CONTACT_EMAIL_ADDRESS}
+                    <a href={`mailto:${CONTACT_EMAIL_ADDRESS}`}>
+                      {CONTACT_EMAIL_ADDRESS}
                     </a>
                   </li>
                   <li>Office Time: 9 a.m.- 6 p.m.</li>
@@ -125,27 +135,27 @@ export default function Footer() {
               <div className='social-icons'>
                 <ul>
                   <li>
-                    <a href={CONST.FACEBOOK_URL}>
+                    <a href={FACEBOOK_URL}>
                       <i className='ti-facebook'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={CONST.TWITTER_URL}>
+                    <a href={TWITTER_URL}>
                       <i className='ti-twitter-alt'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={CONST.LINKEDIN_URL}>
+                    <a href={LINKEDIN_URL}>
                       <i className='ti-linkedin'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={CONST.PINTEREST_URL}>
+                    <a href={PINTEREST_URL}>
                       <i className='ti-pinterest'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={CONST.VIMEO_URL}>
+                    <a href={VIMEO_URL}>
                       <i className='ti-vimeo-alt'></i>
                     </a>
                   </li>

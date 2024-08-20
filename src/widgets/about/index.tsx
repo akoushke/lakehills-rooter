@@ -1,18 +1,23 @@
+'use client';
+
 import './styles.scss';
+import { ABOUT } from '@/lib/constants';
+import { useEffect, useState } from 'react';
 
-type Props = {
-  title?: string;
-  text?: string;
-  video?: string;
-  image?: string;
-};
+type AboutType = {
+  title: string;
+  body: string;
+  image: string;
+  videoLink: string;
+} | null;
 
-export default function About({
-  title = 'We Build for Your Comfort',
-  text = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
-  video = 'https://www.youtube.com/embed/MWjk8asP2e8?autoplay=1',
-  image = 'http://via.placeholder.com/455x475/000/fff',
-}: Props) {
+export default function About() {
+  const [about, setAbout] = useState<AboutType>(null);
+
+  useEffect(() => {
+    setAbout(ABOUT);
+  }, []);
+
   return (
     <section className='about-section section-padding'>
       <div className='container'>
@@ -20,10 +25,10 @@ export default function About({
           <div className='col col-lg-5 col-md-5'>
             <div className='section-title'>
               <span>About us</span>
-              <h2>{title}</h2>
+              <h2>{about?.title}</h2>
             </div>
             <div className='about-text'>
-              <p>{text}</p>
+              <p>{about?.body}</p>
               <a href='#' className='theme-btn'>
                 More About us
               </a>
@@ -34,16 +39,16 @@ export default function About({
               <div className='video-area'>
                 <div className='box'>
                   <a
-                    href={video}
+                    href={about?.videoLink}
                     className='video-btn'
                     data-type='iframe'
-                    tabIndex='0'
+                    tabIndex={0}
                   >
                     <i className='fi fi-rr-play-circle'></i>
                     <span>See intro</span>
                   </a>
                 </div>
-                <img src={image} alt='about-pic' />
+                <img src={about?.image} alt='about-pic' />
               </div>
             </div>
           </div>

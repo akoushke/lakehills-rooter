@@ -4,42 +4,18 @@ import { Navigation, Pagination, Autoplay, Parallax } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Slide from './Slides/slide';
-
+import { CAROUSEL } from '@/lib/constants';
 import { SwiperOptions } from 'swiper/types';
 
 interface SlideType {
-  ID: string;
   body: string;
   image: string;
 }
 
 export default function Carousel() {
   const [slides, setSlides] = useState<Array<SlideType>>([]);
-  const fileName = 'slide';
 
-  useEffect(() => {
-    const fetchMarkdownData = async () => {
-      try {
-        const response = await fetch(`/api/markdown/${fileName}`);
-        if (!response.ok) {
-          throw new Error('File not found');
-        }
-        const { items } = await response.json();
-        const slides = items.map((item: any) => ({
-          body: item.slide.body,
-          image: item.cover,
-        }));
-
-        setSlides(slides);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchMarkdownData();
-  }, []);
-
-  var interleaveOffset = 0.5;
+  const interleaveOffset = 0.5;
   const slideOpts: SwiperOptions = {
     modules: [Autoplay, Parallax, Navigation, Pagination],
     loop: true,
@@ -87,12 +63,17 @@ export default function Carousel() {
       }
     },
   };
-
   const slidesComps = slides.map((slide, index) => (
     <SwiperSlide key={index}>
       <Slide body={slide.body} image={slide.image} />
     </SwiperSlide>
   ));
+
+  useEffect(() => {
+    setSlides(CAROUSEL.items);
+    return () => {};
+  }, []);
+
   return (
     <section className='hero-slider  hero-style-3'>
       <Swiper {...slideOpts}>
