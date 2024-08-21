@@ -12,11 +12,17 @@ interface SlideType {
   image: string;
 }
 
+interface CustomSwiperOptions extends SwiperOptions {
+  onTouchStart: (swiper: any) => void;
+  onSetTransition: (swiper: any, speed: number) => void;
+  onProgress: (swiper: any, progress: any) => void;
+}
+
 export default function Carousel() {
   const [slides, setSlides] = useState<Array<SlideType>>([]);
 
   const interleaveOffset = 0.5;
-  const slideOpts: SwiperOptions = {
+  const slideOpts: CustomSwiperOptions = {
     modules: [Autoplay, Parallax, Navigation, Pagination],
     loop: true,
     speed: 1000,
@@ -43,11 +49,11 @@ export default function Carousel() {
         swiper.slides[i].style.transition = '';
       }
     },
-    onSetTransition: (swiper: { slides: string | any[] }, speed: string) => {
+    onSetTransition: (swiper: { slides: string | any[] }, speed: number) => {
       for (var i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = speed + 'ms';
+        swiper.slides[i].style.transition = speed.toString() + 'ms';
         swiper.slides[i].querySelector('.slide-inner').style.transition =
-          speed + 'ms';
+          speed.toString() + 'ms';
       }
     },
     onProgress: (

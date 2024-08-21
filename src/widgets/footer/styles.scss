@@ -1,4 +1,4 @@
-site-footer {
+.site-footer {
   background-color: #222328;
   position: relative;
   font-size: 15px;
@@ -32,7 +32,6 @@ site-footer {
 
 @media (max-width: 991px) {
   .site-footer .upper-footer .col {
-    min-height: 235px;
     margin-bottom: 70px;
   }
 }

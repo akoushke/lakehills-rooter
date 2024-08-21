@@ -11,6 +11,11 @@ body {
   overflow-x: hidden;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 p {
   color: #797979;
   line-height: 1.7em;
@@ -178,6 +183,9 @@ img {
 }
 .fi:before {
   margin: 0;
+}
+a.disabled {
+  pointer-events: none;
 }
 .section-padding {
   padding: 110px 0;

@@ -51,22 +51,22 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                   <div className='social-links'>
                     <ul>
                       <li>
-                        <a href={FACEBOOK_URL}>
+                        <a className='disabled' href={FACEBOOK_URL}>
                           <i className='ti-facebook'></i>
                         </a>
                       </li>
                       <li>
-                        <a href={TWITTER_URL}>
+                        <a className='disabled' href={TWITTER_URL}>
                           <i className='ti-twitter-alt'></i>
                         </a>
                       </li>
                       <li>
-                        <a href={VIMEO_URL}>
+                        <a className='disabled' href={VIMEO_URL}>
                           <i className='ti-vimeo-alt'></i>
                         </a>
                       </li>
                       <li>
-                        <a href={PINTEREST_URL}>
+                        <a className='disabled' href={PINTEREST_URL}>
                           <i className='ti-pinterest'></i>
                         </a>
                       </li>
@@ -80,7 +80,7 @@ export default function Header({ slug, setEnableOverlay }: Props) {
         <nav className='navigation navbar navbar-default'>
           <div className='container'>
             <div className='navbar-header'>
-              <button
+              {/* <button
                 type='button'
                 className='open-btn'
                 onClick={() => displayNav(true)}
@@ -89,23 +89,23 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                 <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
-              </button>
-              <a className='navbar-brand' href='/'>
+              </button> */}
+              {/* <a className='navbar-brand' href='/'>
                 <img src='/logo/transparent.png' alt='logo' />
-              </a>
+              </a> */}
             </div>
-            <div
+            {/* <div
               id='navbar'
               className={`navbar-collapse collapse navbar-right navigation-holder ${showNav && 'slideInn'}`}
             >
-              <button
+             <button
                 className='close-navbar'
                 onClick={() => displayNav(false)}
               >
                 <i className='ti-close'></i>
               </button>
               <ul className='nav navbar-nav'>
-                <li className={slug === '' ? 'active' : ''}>
+                 <li className={slug === '' ? 'active' : ''}>
                   <a href='/'>Home</a>
                 </li>
                 <li className={slug === 'about' ? 'active' : ''}>
@@ -141,17 +141,17 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                 </li>
                 <li className={slug === 'contact' ? 'active' : ''}>
                   <a href='/contact'>Contact Us</a>
-                </li>
+                </li> 
               </ul>
             </div>
 
-            <div className='cart-contact'>
+             <div className='cart-contact'>
               <div className='contact-btn hidden-xs'>
                 <a href='/contact' className='theme-btn'>
                   Request Quote
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </nav>
       </header>

@@ -37,8 +37,8 @@ export default function Review() {
           <span>Client Reviews</span>
           <h2>Service Recipient Says</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry lorem Ipsum has been the industry's standard dummy text
+            {` Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry lorem Ipsum has been the industry's standard dummy text`}
           </p>
         </div>
         <OwlCarousel className='owl-theme' {...options}>
@@ -67,8 +67,8 @@ export default function Review() {
               </span>
             </div>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
+              {` Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry lorem Ipsum has been the industry's standard dummy text`}
             </p>
             <img alt='' src='/reviews1.png' />
             <h3>
@@ -103,8 +103,8 @@ export default function Review() {
               </span>
             </div>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
+              {`Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry lorem Ipsum has been the industry's standard dummy texty`}
             </p>
             <img alt='' src='/reviews2.png' />
             <h3>
@@ -139,8 +139,8 @@ export default function Review() {
               </span>
             </div>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
+              {`Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry lorem Ipsum has been the industry's standard dummy texty`}
             </p>
             <img alt='' src='/reviews1.png' />
             <h3>
@@ -174,8 +174,8 @@ export default function Review() {
               </span>
             </div>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
+              {`Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry lorem Ipsum has been the industry's standard dummy texty`}
             </p>
             <img alt='' src='/reviews2.png' />
             <h3>

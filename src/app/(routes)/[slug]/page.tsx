@@ -8,6 +8,16 @@ import Custom404 from '@/widgets/404';
 import ServiceDetails from '@/widgets/service-details';
 import Contact from '@/widgets/contact';
 
+export async function generateStaticParams() {
+  return [
+    { slug: 'about' },
+    { slug: 'faq' },
+    { slug: 'services' },
+    { slug: 'service-details' },
+    { slug: 'contact' },
+  ];
+}
+
 export default function Page({ params }: { params: { slug: string } }) {
   const pages = new Map([
     ['about', <About key='about' />],
