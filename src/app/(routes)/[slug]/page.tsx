@@ -25,7 +25,6 @@ export async function generateStaticParams() {
     env.isDev ? slug : `${env.basePath}/${slug}`
   );
 
-  console.log(slugs);
   return slugs.map((slug) => ({ slug }));
 }
 

@@ -10,9 +10,12 @@ import FunFact from '@/widgets/fun-fact';
 import Review from '@/widgets/review';
 
 import { useFetchMarkdown } from '@/hooks';
+import env from '@/lib/environments';
 
 export default function Home() {
   // const markdownData = useFetchMarkdown('home');
+
+  console.log('ENVIRONMENT', env.basePath);
   return (
     <main>
       <Carousel />
