@@ -1,11 +1,15 @@
 type EnvironmentType = {
   basePath: string;
+  isDev: boolean;
 };
 
 class Environment {
   basePath;
-  constructor({ basePath }: EnvironmentType) {
+  isDev;
+
+  constructor({ basePath }: { basePath: string }) {
     this.basePath = basePath;
+    this.isDev = process.env.NODE_ENV === 'development';
   }
 }
 

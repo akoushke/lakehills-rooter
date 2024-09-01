@@ -7,18 +7,19 @@ import PageHeading from '@/widgets/page-heading';
 import Custom404 from '@/widgets/404';
 import ServiceDetails from '@/widgets/service-details';
 import Contact from '@/widgets/contact';
+import env from '@/lib/environments';
 
 // app/[slug]/page.js
 
 export async function generateStaticParams() {
   // Define the slugs that should have statically generated pages
   const slugs = [
-    'about',
-    'faq',
-    'services',
-    'service-details',
-    'contact',
-    'reviews',
+    env.isDev ? 'about' : `${env.basePath}/about`,
+    env.isDev ? 'faq' : `${env.basePath}/faq`,
+    env.isDev ? 'services' : `${env.basePath}/services`,
+    env.isDev ? 'service-details' : `${env.basePath}/service-details`,
+    env.isDev ? 'contact' : `${env.basePath}/contact`,
+    env.isDev ? 'reviews' : `${env.basePath}/reviews`,
   ];
 
   return slugs.map((slug) => ({ slug }));
