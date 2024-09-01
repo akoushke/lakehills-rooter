@@ -62,7 +62,6 @@ jobs:
       - name: Print Environment Variables
         run: |
           echo "NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}"
-          echo "NEXT_PUBLIC_BASE_PATH: ${{ $NEXT_PUBLIC_BASE_PATH }}"
 
       - name: Restore cache
         uses: actions/cache@v4
@@ -80,7 +79,7 @@ jobs:
 
       - name: Build with Next.js
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
+          NEXT_PUBLIC_BASE_PATH: '/lakeshills-rooter'
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
