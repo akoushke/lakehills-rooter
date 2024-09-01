@@ -15,7 +15,6 @@ import env from '@/lib/environments';
 export default function Home() {
   // const markdownData = useFetchMarkdown('home');
 
-  console.log('ENVIRONMENT', env.basePath);
   return (
     <main>
       <Carousel />

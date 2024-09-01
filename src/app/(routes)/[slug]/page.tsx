@@ -11,7 +11,7 @@ import env from '@/lib/environments';
 
 export async function generateStaticParams() {
   // Define the base slugs
-  const baseSlugs = [
+  const slugs = [
     'about',
     'faq',
     'services',
@@ -21,9 +21,9 @@ export async function generateStaticParams() {
   ];
 
   // Create the full list of slugs
-  const slugs = baseSlugs.map((slug) =>
-    env.isDev ? slug : `${env.basePath}/${slug}`
-  );
+  // const slugs = baseSlugs.map((slug) =>
+  //   env.isDev ? slug : `${env.basePath}/${slug}`
+  // );
 
   return slugs.map((slug) => ({ slug }));
 }
