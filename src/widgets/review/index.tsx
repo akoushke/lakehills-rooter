@@ -1,8 +1,12 @@
+'use client';
 import OwlCarousel from '../owl-carousel';
+import { useState } from 'react';
+import { REVIEWS } from '../../lib/constants';
 
 import './styles.scss';
 
 export default function Review() {
+  const [reviews, setReviews] = useState(REVIEWS);
   const options = {
     items: 3,
     loop: true,
@@ -30,160 +34,53 @@ export default function Review() {
       },
     },
   };
+
+  const Reviews = () =>
+    reviews.items.map((item, index) => (
+      <div key={index} className='reviews-item'>
+        <h2>{item.title}</h2>
+        <div className='reviews-stars'>
+          <span className='icon'>
+            {' '}
+            <i className='fa fa-star'></i>{' '}
+          </span>
+          <span className='icon'>
+            {' '}
+            <i className='fa fa-star'></i>{' '}
+          </span>
+          <span className='icon'>
+            {' '}
+            <i className='fa fa-star'></i>{' '}
+          </span>
+          <span className='icon'>
+            {' '}
+            <i className='fa fa-star'></i>{' '}
+          </span>
+          <span className='icon'>
+            {' '}
+            <i className='fa fa-star'></i>{' '}
+          </span>
+        </div>
+        <p>{item.body}</p>
+        <img alt='' src={item.image} />
+        <h3>
+          {item.name}
+          <br />
+          <span>{item.location}</span>
+        </h3>
+      </div>
+    ));
+
   return (
     <section className='review-section'>
       <div className='container'>
         <div className='section-title-s2'>
-          <span>Client Reviews</span>
+          <span>{reviews.title}</span>
           <h2>Service Recipient Says</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry lorem Ipsum has been the industry's standard dummy text
-          </p>
+          <p>{reviews.body}</p>
         </div>
         <OwlCarousel className='owl-theme' {...options}>
-          <div className='reviews-item'>
-            <h2>Awesome Service</h2>
-            <div className='reviews-stars'>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-            </div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
-            </p>
-            <img alt='' src='/reviews1.png' />
-            <h3>
-              Kolis Muller
-              <br />
-              <span>USA Citizen</span>
-            </h3>
-          </div>
-
-          <div className='reviews-item'>
-            <h2>Awesome Service</h2>
-            <div className='reviews-stars'>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-            </div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
-            </p>
-            <img alt='' src='/reviews2.png' />
-            <h3>
-              Kolis Muller
-              <br />
-              <span>USA Citizen</span>
-            </h3>
-          </div>
-
-          <div className='reviews-item'>
-            <h2>Awesome Service</h2>
-            <div className='reviews-stars'>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-            </div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
-            </p>
-            <img alt='' src='/reviews1.png' />
-            <h3>
-              Kolis Muller
-              <br />
-              <span>USA Citizen</span>
-            </h3>
-          </div>
-          <div className='reviews-item'>
-            <h2>Awesome Service</h2>
-            <div className='reviews-stars'>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-              <span className='icon'>
-                {' '}
-                <i className='fa fa-star'></i>{' '}
-              </span>
-            </div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry lorem Ipsum has been the industry's standard dummy texty
-            </p>
-            <img alt='' src='/reviews2.png' />
-            <h3>
-              Kolis Muller
-              <br />
-              <span>USA Citizen</span>
-            </h3>
-          </div>
+          <Reviews />
         </OwlCarousel>
       </div>
     </section>

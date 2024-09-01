@@ -38,30 +38,30 @@ export default function Carousel() {
       disableOnInteraction: false,
     },
     slidesPerView: 1,
-    onTouchStart: (swiper: any) => {
-      for (var i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = '';
-      }
-    },
-    onSetTransition: (swiper: { slides: string | any[] }, speed: string) => {
-      for (var i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = speed + 'ms';
-        swiper.slides[i].querySelector('.slide-inner').style.transition =
-          speed + 'ms';
-      }
-    },
-    onProgress: (
-      swiper: { slides: string | any[]; width: number },
-      progress: any
-    ) => {
-      for (var i = 0; i < swiper.slides.length; i++) {
-        var slideProgress = swiper.slides[i].progress;
-        var innerOffset = swiper.width * interleaveOffset;
-        var innerTranslate = slideProgress * innerOffset;
-        swiper.slides[i].querySelector('.slide-inner').style.transform =
-          'translate3d(' + innerTranslate + 'px, 0, 0)';
-      }
-    },
+    // onTouchStart: (swiper: any) => {
+    //   for (var i = 0; i < swiper.slides.length; i++) {
+    //     swiper.slides[i].style.transition = '';
+    //   }
+    // },
+    // onSetTransition: (swiper: { slides: string | any[] }, speed: string) => {
+    //   for (var i = 0; i < swiper.slides.length; i++) {
+    //     swiper.slides[i].style.transition = speed + 'ms';
+    //     swiper.slides[i].querySelector('.slide-inner').style.transition =
+    //       speed + 'ms';
+    //   }
+    // },
+    // onProgress: (
+    //   swiper: { slides: string | any[]; width: number },
+    //   progress: any
+    // ) => {
+    //   for (var i = 0; i < swiper.slides.length; i++) {
+    //     var slideProgress = swiper.slides[i].progress;
+    //     var innerOffset = swiper.width * interleaveOffset;
+    //     var innerTranslate = slideProgress * innerOffset;
+    //     swiper.slides[i].querySelector('.slide-inner').style.transform =
+    //       'translate3d(' + innerTranslate + 'px, 0, 0)';
+    //   }
+    // },
   };
   const slidesComps = slides.map((slide, index) => (
     <SwiperSlide key={index}>

@@ -8,6 +8,22 @@ import Custom404 from '@/widgets/404';
 import ServiceDetails from '@/widgets/service-details';
 import Contact from '@/widgets/contact';
 
+// app/[slug]/page.js
+
+export async function generateStaticParams() {
+  // Define the slugs that should have statically generated pages
+  const slugs = [
+    'about',
+    'faq',
+    'services',
+    'service-details',
+    'contact',
+    'reviews',
+  ];
+
+  return slugs.map((slug) => ({ slug }));
+}
+
 export default function Page({ params }: { params: { slug: string } }) {
   const pages = new Map([
     ['about', <About key='about' />],

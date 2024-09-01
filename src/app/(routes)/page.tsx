@@ -1,6 +1,5 @@
 'use client';
 
-import Preloader from '@/widgets/preloader';
 import Carousel from '@/widgets/swiper';
 import Feature from '@/widgets/feature';
 import About from '@/widgets/about';

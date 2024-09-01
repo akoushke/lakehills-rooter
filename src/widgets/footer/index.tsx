@@ -9,9 +9,14 @@ import {
   CONTACT_EMAIL_ADDRESS,
   CONTACT_PHONE_NUMBER,
   CONTACT_ADDRESS,
+  FOOTER,
 } from '@/lib/constants';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
+  const [footer, setFooter] = useState(FOOTER);
+
+  useEffect(() => setFooter(FOOTER), []);
   return (
     <footer className='site-footer'>
       <div className='upper-footer'>
@@ -22,11 +27,7 @@ export default function Footer() {
                 <div className='logo widget-title'>
                   <h3>About Us</h3>
                 </div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry lorem Ipsum has been the industry's
-                  standard dummy text
-                </p>
+                <p> {footer.about}</p>
                 <ul className='footer-social-menu list-inline'>
                   <li>
                     <a href={FACEBOOK_URL}>
@@ -100,15 +101,14 @@ export default function Footer() {
                 <div className='widget-title'>
                   <h3>Newsletter</h3>
                 </div>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing industry.
-                </p>
+                <p>{footer.newsletter}</p>
                 <form>
                   <div className='input-1'>
                     <input
+                      disabled
                       type='email'
                       className='form-control'
-                      placeholder='Email Address *'
+                      placeholder='Coming Soon...'
                       required
                     />
                   </div>

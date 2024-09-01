@@ -65,9 +65,7 @@ export default function Portfolio() {
             <div className='portfolio-grids portfolio-slider'>
               <OwlCarousel className='owl-theme' {...options}>
                 {portfolio.cards?.map((card, index) => (
-                  <>
-                    <Card key={index} {...card} />
-                  </>
+                  <Card key={index} {...card} />
                 ))}
               </OwlCarousel>
             </div>

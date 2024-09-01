@@ -1,5 +1,4 @@
-import { subscribe } from 'diagnostics_channel';
-import { title } from 'process';
+import env from '@/lib/environments';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 const CONTACT_EMAIL_ADDRESS = 'lakehills.rooter@gmail.com';
@@ -20,15 +19,15 @@ const CAROUSEL = {
   items: [
     {
       body: 'Top-rated Sewer & Drain Services: fast, reliable solutions for a worry-free home!',
-      image: '/images/carousel/slide1.jpg',
+      image: `${env.basePath}/images/carousel/slide1.jpg`,
     },
     {
       body: 'Reliable Sewer & Drain Services: Expert care for smooth, trouble-free plumbing!',
-      image: '/images/carousel/slide2.jpg',
+      image: `${env.basePath}/images/carousel/slide2.jpg`,
     },
     {
       body: 'Swift & Reliable Sewer & Drain Services — Expert solutions for hassle-free plumbing!',
-      image: '/images/carousel/slide3.jpg',
+      image: `${env.basePath}/images/carousel/slide3.jpg`,
     },
   ],
 };
@@ -57,7 +56,7 @@ const ABOUT = {
     and effectively. Whether you’re dealing with a minor issue or a major repair, 
     we provide top-notch solutions and exceptional service, giving you confidence 
     and peace of mind every time.`,
-  image: '/images/about/girl.jpg',
+  image: `${env.basePath}/images/about/girl.jpg`,
   videoLink: 'https://www.youtube.com/watch?v=7e90gBu4pas',
 };
 const SERVICE = {
@@ -99,83 +98,93 @@ const PORTFOLIO = {
   body: 'View Our Extensive Portfolio of Successful Plumbing Projects',
   cards: [
     {
-      icon: '/images/projects/residential.jpg',
+      icon: `${env.basePath}/images/projects/residential.jpg`,
       title: 'Residential',
       body: 'Explore our expertise in industrial plumbing solutions',
     },
     {
-      icon: '/images/projects/commercial.jpg',
+      icon: `${env.basePath}/images/projects/commercial.jpg`,
       title: 'Commercial',
       body: 'Discover our proven commercial plumbing solutions and projects',
     },
     {
-      icon: '/images/projects/industrial.jpg',
+      icon: `${env.basePath}/images/projects/industrial.jpg`,
       title: 'Industrial',
       body: 'Check out our comprehensive industrial plumbing projects and services',
     },
   ],
 };
+
 const FUN_FACT = {
   title: 'Fun Facts',
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  image: '/images/fun-fact/plumbers.jpg',
+  image: `${env.basePath}/images/fun-fact/plumbers.jpg`,
   projects: 100,
   years: 10,
   awards: 55,
   clients: 100,
   time: 2,
 };
+
 const REVIEWS = {
   title: 'Our Reviews',
-  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  body: 'Read what our clients are saying about their experiences with our services.',
   items: [
     {
-      image: '/images/review/1.jpg',
-      name: 'John Doe',
-      location: 'California',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: `${env.basePath}/images/reviews/reviews1.jpg`,
+      title: 'Great Service',
+      name: 'Jane Smith',
+      location: 'Seattle, WA',
+      body: 'I had an incredible experience with the team. They were professional, attentive, and truly cared about my needs. Highly recommend!',
     },
     {
-      image: '/images/review/1.jpg',
-      name: 'John Doe',
-      location: 'California',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: `${env.basePath}/images/reviews/reviews2.jpg`,
+      title: 'Exceeded Goals',
+      name: 'Michael Johnson',
+      location: 'Bellevue, WA',
+      body: 'The service exceeded my expectations. The staff was friendly, and the results were outstanding. I will definitely be returning!',
     },
     {
-      image: '/images/review/1.jpg',
-      name: 'John Doe',
-      location: 'California',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: `${env.basePath}/images/reviews/reviews3.jpg`,
+      title: 'Top Service',
+      name: 'Emily Davis',
+      location: 'Everett, WA',
+      body: 'From start to finish, everything was perfect. The staff went above and beyond to ensure I was satisfied. I couldn’t ask for more!',
     },
     {
-      image: '/images/review/1.jpg',
-      name: 'John Doe',
-      location: 'California',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: `${env.basePath}/images/reviews/reviews1.jpg`,
+      title: 'Highly Rated',
+      name: 'William Brown',
+      location: 'Kirkland, WA',
+      body: 'I am extremely pleased with the service. The team was very professional, and the quality was outstanding. I would recommend them to anyone!',
     },
     {
-      image: '/images/review/1.jpg',
-      name: 'John Doe',
-      location: 'California',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: `${env.basePath}/images/reviews/reviews2.jpg`,
+      title: 'Amazing Work',
+      name: 'Olivia Wilson',
+      location: 'Lynnwood, WA',
+      body: 'I couldn’t be happier with the results. The service was quick, efficient, and delivered exactly what I needed. Five stars!',
     },
     {
-      image: '/images/review/1.jpg',
-      name: 'John Doe',
-      location: 'California',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: `${env.basePath}/images/reviews/reviews3.jpg`,
+      title: 'Great Support',
+      name: 'James Anderson',
+      location: 'Redmond, WA',
+      body: 'The customer support was amazing. They answered all my questions and ensured I was completely satisfied with the service.',
     },
     {
-      image: '/images/review/1.jpg',
-      name: 'John Doe',
-      location: 'California',
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: `${env.basePath}/images/reviews/reviews1.jpg`,
+      title: 'Very Pro Team',
+      name: 'Sophia Martinez',
+      location: 'Bothell, WA',
+      body: 'Very professional and efficient service. They took care of everything promptly and with great attention to detail. Highly recommended!',
     },
   ],
 };
+
 const FOOTER = {
   about:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'At Lakehill Rooter, we bring over 15 years of expertise in plumbing, providing reliable and efficient solutions for your home and business needs.',
   links: [
     {
       about: 'About Us',

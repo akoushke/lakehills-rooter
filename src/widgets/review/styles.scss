@@ -24,7 +24,6 @@
   transition: all 0.4s ease;
 }
 .review-section .reviews-item h2 {
-  font-size: 16px;
   font-size: 1rem;
   display: inline-block;
   font-weight: 500;
@@ -45,9 +44,13 @@
   font-size: 0.9375rem;
   color: #a6a6a6;
   font-family: Poppins, sans-serif;
-  letter-spacing: normal;
-  padding: 0;
-  text-transform: none;
+  display: -webkit-box; /* Display the element as a webkit box */
+  -webkit-box-orient: vertical; /* Set the orientation to vertical */
+  -webkit-line-clamp: 3; /* Limit the text to 3 lines */
+  overflow: hidden; /* Hide any overflowing content */
+  text-overflow: ellipsis; /* Display an ellipsis ('...') at the end */
+  max-height: calc(3 * 1.5em); /* Adjust max height based on the line height */
+  line-height: 1.5em; /* Set the line height */
 }
 .review-section .reviews-item img {
   width: 60px;
