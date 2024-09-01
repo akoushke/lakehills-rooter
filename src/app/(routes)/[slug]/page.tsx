@@ -9,18 +9,21 @@ import ServiceDetails from '@/widgets/service-details';
 import Contact from '@/widgets/contact';
 import env from '@/lib/environments';
 
-// app/[slug]/page.js
-
 export async function generateStaticParams() {
-  // Define the slugs that should have statically generated pages
-  const slugs = [
-    env.isDev ? 'about' : `${env.basePath}/about`,
-    env.isDev ? 'faq' : `${env.basePath}/faq`,
-    env.isDev ? 'services' : `${env.basePath}/services`,
-    env.isDev ? 'service-details' : `${env.basePath}/service-details`,
-    env.isDev ? 'contact' : `${env.basePath}/contact`,
-    env.isDev ? 'reviews' : `${env.basePath}/reviews`,
+  // Define the base slugs
+  const baseSlugs = [
+    'about',
+    'faq',
+    'services',
+    'service-details',
+    'contact',
+    'reviews',
   ];
+
+  // Create the full list of slugs
+  const slugs = baseSlugs.map((slug) =>
+    env.isDev ? slug : `${env.basePath}/${slug}`
+  );
 
   return slugs.map((slug) => ({ slug }));
 }
@@ -35,6 +38,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   ]);
 
   const isReview = params.slug === 'reviews';
+  const isNotValid = !pages.has(params.slug) && !isReview;
 
   return (
     <>

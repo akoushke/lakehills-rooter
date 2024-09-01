@@ -12,6 +12,7 @@ import {
   FOOTER,
 } from '@/lib/constants';
 import { useEffect, useState } from 'react';
+import env from '@/lib/environments';
 
 export default function Footer() {
   const [footer, setFooter] = useState(FOOTER);
@@ -59,21 +60,21 @@ export default function Footer() {
                 </div>
                 <ul>
                   <li>
-                    <a href='/about'>About Us</a>
+                    <a href={`${env.basePath}/about`}>About Us</a>
                   </li>
                   <li>
-                    <a href='/services'>Our Services</a>
+                    <a href={`${env.basePath}/services`}>Our Services</a>
                   </li>
                   <li>
-                    <a href='/contact'>Contact Us</a>
+                    <a href={`${env.basePath}/contact`}>Contact Us</a>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <a href='/reviews'>Reviews</a>
+                    <a href={`${env.basePath}/reviews`}>Reviews</a>
                   </li>
                   <li>
-                    <a href='/faq'>FAQ</a>
+                    <a href={`${env.basePath}/faq`}>FAQ</a>
                   </li>
                 </ul>
               </div>

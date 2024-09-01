@@ -17,9 +17,6 @@ export default function Card({ body, icon, title }: Props) {
           </div>
           <div className='featured-desc'>
             <p>{body}</p>
-            {/* <a className='btn' href='#'>
-              More Services<i className='ti ti-arrow-right'></i>
-            </a> */}
           </div>
         </div>
       </div>

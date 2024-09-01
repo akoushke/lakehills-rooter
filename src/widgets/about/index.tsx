@@ -3,6 +3,7 @@
 import './styles.scss';
 import { ABOUT } from '@/lib/constants';
 import { useEffect, useState } from 'react';
+import env from '@/lib/environments';
 
 type AboutType = {
   title: string;
@@ -29,7 +30,7 @@ export default function About() {
             </div>
             <div className='about-text'>
               <p>{about?.body}</p>
-              <a href='#' className='theme-btn'>
+              <a href={`${env.basePath}/about`} className='theme-btn'>
                 More About us
               </a>
             </div>

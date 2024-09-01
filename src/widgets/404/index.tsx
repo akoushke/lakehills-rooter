@@ -1,4 +1,5 @@
 import './styles.scss';
+import env from '@/lib/environments';
 
 export default function Custom404() {
   return (
@@ -20,7 +21,7 @@ export default function Custom404() {
               </div> */}
               <ul className='link_btn'>
                 <li>
-                  <a href='/' className='theme-btn'>
+                  <a href={`${env.basePath}`} className='theme-btn'>
                     go to home
                   </a>
                 </li>

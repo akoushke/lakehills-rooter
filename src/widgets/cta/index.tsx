@@ -2,6 +2,7 @@
 
 import { CONTACT_PHONE_NUMBER, CONTACT_US } from '@/lib/constants';
 import { useEffect, useState } from 'react';
+import env from '@/lib/environments';
 import './styles.scss';
 
 type ContactType = {
@@ -26,7 +27,7 @@ export default function CTA() {
               <div className='phone-btn'>
                 <span>{CONTACT_PHONE_NUMBER}</span>{' '}
                 <span className='mid-text'>or</span>
-                <a href='/contact' className='theme-btn'>
+                <a href={`${env.basePath}/contact`} className='theme-btn'>
                   Contact us
                 </a>
               </div>

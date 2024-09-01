@@ -8,6 +8,7 @@ import {
   PINTEREST_URL,
 } from '@/lib/constants';
 import { useState } from 'react';
+import env from '@/lib/environments';
 
 import './styles.scss';
 
@@ -90,8 +91,8 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                 <span className='icon-bar'></span>
                 <span className='icon-bar'></span>
               </button>
-              <a className='navbar-brand' href='/'>
-                <img src='/logo/transparent.png' alt='logo' />
+              <a className='navbar-brand' href={`${env.basePath}`}>
+                <img src={`${env.basePath}/logo/transparent.png`} alt='logo' />
               </a>
             </div>
             <div
@@ -106,10 +107,10 @@ export default function Header({ slug, setEnableOverlay }: Props) {
               </button>
               <ul className='nav navbar-nav'>
                 <li className={slug === '' ? 'active' : ''}>
-                  <a href='/'>Home</a>
+                  <a href={`${env.basePath}`}>Home</a>
                 </li>
                 <li className={slug === 'about' ? 'active' : ''}>
-                  <a href='/about'>About Us</a>
+                  <a href={`${env.basePath}/about`}>About Us</a>
                 </li>
                 <li
                   className={`menu-item-has-children ${pageMenuLinks.includes(slug) ? 'active' : ''}`}
@@ -117,10 +118,10 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                   <a href='#'>Pages</a>
                   <ul className='sub-menu'>
                     <li className={`${slug == 'faq' ? 'active' : ''}`}>
-                      <a href='/faq'>FAQ</a>
+                      <a href={`${env.basePath}/faq`}>FAQ</a>
                     </li>
                     <li className={`${slug == 'reviews' ? 'active' : ''}`}>
-                      <a href='/reviews'>Reviews</a>
+                      <a href={`${env.basePath}/reviews`}>Reviews</a>
                     </li>
                   </ul>
                 </li>
@@ -130,24 +131,26 @@ export default function Header({ slug, setEnableOverlay }: Props) {
                   <a href='#'>Services</a>
                   <ul className='sub-menu'>
                     <li className={`${slug == 'services' ? 'active' : ''}`}>
-                      <a href='/services'>Services</a>
+                      <a href={`${env.basePath}/services`}>Services</a>
                     </li>
                     <li
                       className={`${slug == 'service-details' ? 'active' : ''}`}
                     >
-                      <a href='/service-details'>Service Details</a>
+                      <a href={`${env.basePath}/service-details`}>
+                        Service Details
+                      </a>
                     </li>
                   </ul>
                 </li>
                 <li className={slug === 'contact' ? 'active' : ''}>
-                  <a href='/contact'>Contact Us</a>
+                  <a href={`${env.basePath}/contact`}>Contact Us</a>
                 </li>
               </ul>
             </div>
 
             <div className='cart-contact'>
               <div className='contact-btn hidden-xs'>
-                <a href='/contact' className='theme-btn'>
+                <a href={`${env.basePath}/contact`} className='theme-btn'>
                   Request Quote
                 </a>
               </div>

@@ -1,4 +1,5 @@
 import './styles.scss';
+import env from '@/lib/environments';
 
 type Props = {
   pageTitle: string;
@@ -19,10 +20,10 @@ export default function PageHeading({ pageTitle }: Props) {
                 <div className='breadcrumb-list'>
                   <ul>
                     <li>
-                      <a href='/'>Home</a>
+                      <a href={`${env.basePath}`}>Home</a>
                     </li>
                     <li>
-                      <a href={`/${pageTitle}`}>{pageTitle}</a>
+                      <a href={`${env.basePath}/${pageTitle}`}>{pageTitle}</a>
                     </li>
                   </ul>
                 </div>
